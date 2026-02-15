@@ -244,6 +244,14 @@ margin-top:80px;
 .about-wrapper{
  grid-template-columns:1fr;
 }
+@media(max-width:768px){
+ body::before,
+ body::after{
+   width:700px;
+   height:700px;
+   filter:blur(60px);
+ }
+}
 }
 </style>
 </head>
@@ -325,28 +333,6 @@ In einem kostenlosen Erstgespräch klären wir alles in Ruhe. Anschließend erha
 </div>
 
 </div>
-</section>
-
-<section>
-<h2>Bewertungen</h2>
-
-<div class="review-box">
-<strong>Maria K.</strong><br>
-„Ein Engel in der Brandung – meine Mutter fühlt sich sicher und wertgeschätzt.“
-</div>
-
-<div class="review-box">
-<strong>Thomas R.</strong><br>
-„Zuverlässig, herzlich und professionell. Absolute Empfehlung.“
-</div>
-
-<h3>Bewertung schreiben</h3>
-<form>
-<input type="text" placeholder="Ihr Name">
-<textarea rows="4" placeholder="Ihre Bewertung"></textarea>
-<p style="font-size:0.85em;">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß Datenschutz zu.</p>
-<button type="submit">Bewertung absenden</button>
-</form>
 </section>
 
 <section>
