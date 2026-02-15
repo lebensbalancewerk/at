@@ -1,1 +1,361 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LebensBalanceWerk - Carmen Röcher</title>
 
+<meta name="author" content="Carmen Röcher">
+<meta name="keywords" content="Seniorenbetreuung, Freizeitbegleitung, Demenzbetreuung, Angehörigenentlastung, Betreuung Bruck an der Leitha, mobile Betreuung Niederösterreich, mobile Betreuung Burgenland">
+<meta name="description" content="LebensBalanceWerk – persönliche Betreuung, Freizeitbegleitung und Angehörigenentlastung für Senior:innen und Menschen mit besonderen Bedürfnissen. Kostenloses Erstgespräch.">
+<meta name="robots" content="index, follow">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--green:#6fbf9f;
+--green-soft:#eef8f3;
+--sand:#d4b892;
+--sand-soft:#f6efe6;
+--text:#2e3d33;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Inter',sans-serif;
+background: linear-gradient(160deg,#f8fdfb 0%,#f4efe8 100%);
+color:var(--text);
+line-height:1.8;
+overflow-x:hidden;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+letter-spacing:0.5px;
+}
+
+h2{
+font-size:2.3em;
+margin-bottom:40px;
+color:var(--green);
+text-align:center;
+}
+
+body::before,
+body::after{
+content:"";
+position:fixed;
+width:1100px;
+height:1100px;
+border-radius:50%;
+z-index:-1;
+opacity:0.12;
+filter:blur(90px);
+animation:floatMove 50s ease-in-out infinite;
+}
+
+body::before{
+background:var(--green);
+top:-450px;
+left:-400px;
+}
+
+body::after{
+background:var(--sand);
+bottom:-450px;
+right:-400px;
+animation-delay:20s;
+}
+
+@keyframes floatMove{
+0%{transform:translate(0,0) scale(1);}
+50%{transform:translate(-120px,120px) scale(1.15);}
+100%{transform:translate(0,0) scale(1);}
+}
+
+header{
+padding:40px 20px;
+text-align:center;
+}
+
+.logo{
+max-width:400px;
+margin-bottom:20px;
+}
+
+.hero{
+text-align:center;
+padding:110px 20px 130px 20px;
+background:linear-gradient(135deg,var(--green-soft),var(--sand-soft));
+}
+
+.hero h1{
+font-size:3.2em;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.3em;
+font-style:italic;
+max-width:800px;
+margin:auto;
+}
+
+.cta{
+margin-top:40px;
+}
+
+.cta a{
+background:var(--green);
+color:white;
+padding:16px 38px;
+border-radius:50px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.cta a:hover{
+background:var(--sand);
+transform:translateY(-4px);
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:100px 20px;
+}
+
+.card{
+background:white;
+padding:45px;
+border-radius:24px;
+box-shadow:0 30px 70px rgba(0,0,0,0.05);
+margin-bottom:40px;
+}
+
+/* Über mich */
+.about-image{
+text-align:center;
+margin:40px 0 60px 0;
+}
+
+.about-image img{
+max-width:220px;
+width:100%;
+border-radius:22px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.about-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.about-block h3{
+font-size:1.8em;
+color:var(--green);
+margin-bottom:25px;
+text-align:center;
+}
+
+/* Leistungen */
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.service-box{
+background:white;
+padding:40px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,0.05);
+transition:0.4s;
+}
+
+.service-box:hover{
+transform:translateY(-10px);
+}
+
+.service-icon{
+font-size:45px;
+margin-bottom:20px;
+}
+
+/* Preisbox zentriert unter 3 Spalten */
+.service-price{
+grid-column:1 / -1;
+max-width:420px;
+margin:0 auto;
+}
+
+/* Call Button */
+.call-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:var(--green);
+color:white;
+padding:18px 22px;
+border-radius:50px;
+text-decoration:none;
+animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(111,191,159,0.6);}
+70%{box-shadow:0 0 0 30px rgba(111,191,159,0);}
+100%{box-shadow:0 0 0 0 rgba(111,191,159,0);}
+}
+
+footer{
+background:var(--green);
+color:white;
+text-align:center;
+padding:40px;
+margin-top:80px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+
+.services,
+.about-wrapper{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:2.3em;
+}
+
+h2{
+font-size:1.9em;
+}
+
+.hero{
+padding:80px 20px 90px 20px;
+}
+
+section{
+padding:70px 20px;
+}
+
+.logo{
+max-width:260px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" class="logo" alt="LebensBalanceWerk Logo">
+</header>
+
+<div class="hero">
+<h1>LebensBalanceWerk</h1>
+<p>„Ich glaube daran, dass jeder Mensch seine eigenen Fähigkeiten, Wünsche und Stärken in sich trägt – meine Aufgabe ist es, sie zu bewahren, sie sanft zu erwecken, zu stärken und gemeinsam in Würde weiterzuentwickeln.“</p>
+<div class="cta">
+<a href="tel:+436604212375">Kostenloses Erstgespräch vereinbaren</a>
+</div>
+</div>
+
+<section>
+<h2>Über mich & mein Unternehmen</h2>
+
+<div class="about-image">
+<img src="carmen.jpg" alt="Carmen Röcher - LebensBalanceWerk Betreuung und Freizeitbegleitung">
+</div>
+
+<div class="about-wrapper">
+
+<div class="card about-block">
+<h3>Wer ich bin</h3>
+<p>
+Mein Name ist Carmen Röcher und ich arbeite seit mehreren Jahren im Pflege- und Betreuungsbereich sowohl als Mobile Heimhilfe als auch als Behindertenbetreuerin.<br><br>
+Ich schließe mit meinem Unternehmen LebensBalanceWerk eine Versorgungslücke zwischen mobiler Pflege und klassischen Urlaubs- und Freizeitangeboten. Dabei arbeite ich flexibel und individuell planbar.<br><br>
+Meine Ausbildungen umfassen Heimhilfe mit Unterstützung bei der Basisversorgung sowie Lernberater/in P.P. | Evolutionspädagoge/in® und zahlreiche Schulungen der letzten Jahre.<br><br>
+Ich bin eine Frau mit viel Geduld und gleichzeitig viel Power. Auch wenn ich noch jung bin, trage ich eine tiefe Lebenserfahrung und Weisheit in mir.<br><br>
+Ein wichtiger Teil meines Lebens sind meine zwei wundervollen Söhne. Bei begleiteten Ausflügen oder Urlauben unterstützen sie mich gelegentlich – denn Betreuung darf lebendig und menschlich sein.
+</p>
+</div>
+
+<div class="card about-block">
+<h3>Was mein Unternehmen besonders macht</h3>
+<p>
+Der Schwerpunkt liegt bei Seniorinnen und Senioren sowie Menschen mit besonderen Bedürfnissen. Besonders intensive Erfahrung durfte ich im Bereich Demenzbetreuung sammeln.<br><br>
+Oft werde ich als offener, vertrauensvoller, selbstbewusster Sonnenschein beschrieben – als Engel in der Brandung. Für mich sind respektvoller Umgang und wertschätzendes Miteinander selbstverständlich.<br><br>
+Im Mittelpunkt steht eine unterstützende, menschliche und alltagsnahe Begleitung. Sie ersetzt keine medizinische Behandlung sowie keine Therapien oder ärztliche Leistungen.<br><br>
+Gerne gebe ich praktische Tipps für Erleichterung im Alltag – kleine Veränderungen, die Großes bewirken können.<br><br>
+In einem kostenlosen Erstgespräch klären wir alles in Ruhe. Anschließend erhalten Sie ein transparentes, klares Angebot ohne versteckte Kosten.
+</p>
+</div>
+
+</div>
+</section>
+
+<section style="background:var(--green-soft);">
+<h2>Meine Leistungen</h2>
+
+<div class="services">
+
+<div class="service-box">
+<div class="service-icon">🌿</div>
+<h3>Freizeitbegleitung</h3>
+<p>Gemeinsame Spaziergänge, Gespräche, Ausflüge oder begleitete Urlaube – individuell abgestimmt mit Herz, Geduld und Achtsamkeit.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">🤝</div>
+<h3>Kurzfristige Alltagsunterstützung</h3>
+<p>Unterstützung im täglichen Leben sowie kleine haushaltsnahe Hilfestellungen – strukturiert, respektvoll und individuell.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">💛</div>
+<h3>Angehörigenentlastung</h3>
+<p>Entlastung für Familien – bei Urlaub, Kur oder unerwarteten Situationen zuverlässig und flexibel.</p>
+</div>
+
+<div class="service-box service-price">
+<div class="service-icon">⭐️</div>
+<h3>Preisübersicht</h3>
+<p>
+30 Minuten – ab 30 €<br>
+60 Minuten – ab 50 €<br><br>
+Nach einem kostenlosen Erstgespräch erhalten Sie ein maßgeschneidertes Angebot, <br>das sich am tatsächlichen Unterstützungsbedarf orientiert.<br><br>Die Anfahrt innerhalb von 15 km rund um Bruck an der Leitha ist im Preis inkludiert. <br>Darüber hinaus werden Fahrtkosten fair und transparent berechnet.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Impressum</h2>
+<div class="card">
+Carmen Röcher<br>
+LebensBalanceWerk<br>
+Adresse: Bruck an der Leitha<br>
+Telefon: 0660 4212375<br>
+E-Mail: roecher.carmen@gmail.com
+</div>
+
+<h2 style="margin-top:60px;">Datenschutz (DSGVO)</h2>
+<div class="card">
+Ihre personenbezogenen Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
+</div>
+</section>
+
+<footer>
+© 2026 LebensBalanceWerk – Alle Rechte vorbehalten
+</footer>
+
+<a class="call-float" href="tel:+436604212375">📞 Anrufen</a>
+
+</body>
+</html>
