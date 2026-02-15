@@ -225,28 +225,50 @@ margin-top:80px;
 
 .services,
 .about-wrapper{
-grid-template-columns:1fr;
+  grid-template-columns:1fr;
 }
 
 h1{
-font-size:2.3em;
+  font-size:2.2em;
 }
 
 h2{
-font-size:1.9em;
+  font-size:1.8em;
 }
 
 .hero{
-padding:80px 20px 90px 20px;
+  padding:80px 20px 90px 20px;
+}
+
+/* CTA Fix */
+.cta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.cta a{
+  display:block;
+  width:100%;
+  max-width:320px;
+  text-align:center;
+  margin:0 auto;
+}
+
+/* Preisbox bleibt schön mittig */
+.service-price{
+  grid-column:auto;
+  max-width:100%;
 }
 
 section{
-padding:70px 20px;
+  padding:70px 20px;
 }
 
 .logo{
-max-width:260px;
+  max-width:260px;
 }
+
 }
 </style>
 </head>
